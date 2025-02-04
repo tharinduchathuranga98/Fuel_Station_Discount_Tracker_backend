@@ -24,7 +24,7 @@ This is a **Fuel Station Monitoring System** developed by **Tharindu Chathuranga
 ## 🛠 Tech Stack
 - **Backend**: PHP (Laravel)
 - **Database**: MySQL
-- **QR Code**: `SimpleSoftwareIO\QrCode`
+- **QR Code**: `endroid/qr-code`
 - **SMS API**: Notify.lk
 - **Android App**: Java/Kotlin
 
@@ -34,11 +34,11 @@ This is a **Fuel Station Monitoring System** developed by **Tharindu Chathuranga
 
 ### 📌 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/fuel-station-monitoring.git
+git clone https://github.com/tharinduchathuranga98/Fuel_Station_Discount_Tracker_backend.git
 ```
 Navigate into the project directory:
 ```bash
-cd fuel-station-monitoring
+cd Fuel_Station_Discount_Tracker_backend
 ```
 
 ### 📌 2. Install Dependencies
@@ -60,9 +60,9 @@ DB_DATABASE=fuel_station
 DB_USERNAME=root
 DB_PASSWORD=
 
-SMS_USER_ID=29005
-SMS_API_KEY=ElmzSxg37KmMoD63Pf0c
-SMS_SENDER_ID=NotifyDEMO
+SMS_USER_ID=SMS_USER_ID
+SMS_API_KEY=SMS_API_KEY
+SMS_SENDER_ID=SMS_SENDER_ID
 ```
 
 ### 📌 4. Generate App Key
@@ -107,7 +107,7 @@ The API will be available at `http://127.0.0.1:8000`.
     "number_plate": "BCC-1234",
     "owner_name": "John Doe",
     "owner_phone": "94761234567",
-    "qr_code": "data:image/png;base64,iVBORw0..."
+    "qr_code": "iVBORw0..."
   },
   "qr_code_url": "http://127.0.0.1:8000/storage/qrcodes/BCC-1234.png"
 }
@@ -160,10 +160,10 @@ We use **Notify.lk** to send SMS alerts when:
 ### ✅ API Request Format:
 ```json
 {
-    "user_id": "29005",
-    "api_key": "ElmzSxg37KmMoD63Pf0c",
-    "sender_id": "NotifyDEMO",
-    "to": "94769101169",
+    "user_id": "user_id",
+    "api_key": "api_key",
+    "sender_id": "sender_id",
+    "to": "94761234567",
     "message": "Your vehicle BCC-1234 has been refueled with 20 liters."
 }
 ```
@@ -197,8 +197,8 @@ We use **Notify.lk** to send SMS alerts when:
 
 ## 📧 Contact  
 Developed by **Tharindu Chathuranga**  
-📧 Email: your-email@example.com  
-🔗 GitHub: [Your GitHub Profile](https://github.com/your-username)  
+📧 Email: tchathurangaedu@gmail.com  
+🔗 GitHub: [Your GitHub Profile](https://github.com/tharinduchathuranga98)  
 
 ---
 
