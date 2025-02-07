@@ -198,7 +198,7 @@ We use **Notify.lk** to send SMS alerts when:
 ## 📧 Contact  
 Developed by **Tharindu Chathuranga**  
 📧 Email: tchathurangaedu@gmail.com  
-🔗 GitHub: [Your GitHub Profile](https://github.com/tharinduchathuranga98)  
+🔗 GitHub: [tharinduchathuranga98](https://github.com/tharinduchathuranga98)  
 
 ---
 
