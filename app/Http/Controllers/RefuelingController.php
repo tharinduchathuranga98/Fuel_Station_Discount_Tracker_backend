@@ -15,6 +15,7 @@ class RefuelingController extends Controller
     $validated = $request->validate([
         'number_plate' => 'required|string',
         'liters' => 'required|numeric|min:1',
+        'total_price' => 'required|numeric|min:0',
     ]);
 
     // Find the vehicle by number plate
@@ -28,12 +29,13 @@ class RefuelingController extends Controller
     $refuelingRecord = RefuelingRecord::create([
         'number_plate' => $validated['number_plate'],
         'liters' => $validated['liters'],
+        'total_price' => $request->total_price,
         'refueled_at' => now(),
     ]);
 
-    // // Send SMS to the vehicle owner
-    // $message = "Your vehicle has been refueled with {$validated['liters']} liters. Number Plate: {$vehicle->number_plate}";
-    // SmsHelper::sendSms($vehicle->owner_phone, $message);
+    // Send SMS to the vehicle owner
+    $message = "Your vehicle has been refueled with {$validated['liters']} liters for Rs: {$validated['total_price']}. Number Plate: {$vehicle->number_plate}";
+    SmsHelper::sendSms($vehicle->owner_phone, $message);
 
     return response()->json([
         'message' => 'Refueling record added successfully',

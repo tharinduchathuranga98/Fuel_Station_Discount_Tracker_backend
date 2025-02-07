@@ -12,7 +12,6 @@ class QrCodeHelper
         $writer = new PngWriter();
         $result = $writer->write($qrCode);
 
-        return '' . base64_encode($result->getString());
+        return base64_encode($result->getString());
     }
 }
-

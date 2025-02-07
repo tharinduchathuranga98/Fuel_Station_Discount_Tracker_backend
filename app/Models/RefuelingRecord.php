@@ -12,6 +12,7 @@ class RefuelingRecord extends Model
     protected $fillable = [
         'number_plate', // Vehicle number plate
         'liters', // Fuel quantity
+        'total_price',
         'refueled_at', // Date & time of refueling
     ];
 }
